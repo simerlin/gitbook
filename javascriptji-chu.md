@@ -100,10 +100,36 @@ for (let property in object) {
 
 # 对象
 
-> 对象定义 对象字面量（object literal）”法。这种也是 JSON 格式的核心语法
+> 普通定义方式
+```
 var obj = new Object();
+```
+> 对象定义 对象字面量（object literal）”法。这种也是 JSON 格式的核心语法
+```
 var obj = {}
+```
+> 对象的属性可以通过链式（chain）表示方法进行访问：
 
+```
+var obj = {
+    name: "Carrot",
+    "for": "Max",//'for' 是保留字之一，使用'_for'代替
+    details: {
+        color: "orange",
+        size: 12
+    }
+}
 
+obj.details.color; // orange
+obj["details"]["size"]; // 12
+```
+> 原型对象 function 方式
 
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// 定义一个对象
+var You = new Person("You", 24); 
 
