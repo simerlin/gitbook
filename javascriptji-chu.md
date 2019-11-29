@@ -98,6 +98,11 @@ for (let property in object) {
 }
 ```
 
+# 对象
+
+> 对象定义 对象字面量（object literal）”法。这种也是 JSON 格式的核心语法
+var obj = new Object();
+var obj = {}
 
 
 
