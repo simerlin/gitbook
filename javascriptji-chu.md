@@ -85,7 +85,7 @@ Number.isFinite("0"); // false
 
 # 控制结构
 ```
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 5; i++) {//普通循环
   // 将会执行五次
 }
 
