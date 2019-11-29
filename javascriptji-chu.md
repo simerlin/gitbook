@@ -123,6 +123,7 @@ var obj = {
 obj.details.color; // orange
 obj["details"]["size"]; // 12
 ```
+
 > 原型对象 function 方式
 
 function Person(name, age) {
