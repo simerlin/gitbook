@@ -24,8 +24,8 @@ $ git init
 ### Git使用常用命令
 * git status 命令查看仓库当前状态
 * git add file 文件提交到缓存区stage
-![](/assets/709594-20170831012943593-883223078.jpg)
-![](/assets/709594-20170831013019483-2138515257.jpg)
+![git 1.x](/assets/709594-20170831012943593-883223078.jpg)
+![git 2.x](/assets/709594-20170831013019483-2138515257.jpg)
 * git commit -m '提交内容说明' 提交到仓库分支
 * git log 查看仓库版本日志
 * git reset --hard HEAD^ 和 git reset --hard xxx 回退到某个版本
