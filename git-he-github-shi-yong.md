@@ -42,14 +42,26 @@ $ git init
 
 #git导出版本
 
- #### 导出最新的版本库
-   git archive -o ../latest.zip HEAD
- #### 导出指定提交记录
-   git archive -o ../git-1.4.0.tar 8996b47 
- #### 导出一个目录
-   git archive -o ../git-1.4.0-docs.zip  HEAD:Documentation/  
- #### 导出为tar.gz格式
-   git archive   8996b47 | gzip > ../git-1.4.0.tar.gz
+ git archive --format=tar --prefix=junk/ HEAD | (cd /var/tmp/ && tar xf -)
+ 创建一个tar归档文件，其中包含当前分支上最新提交的内容，并将其提取到 /var/tmp/junk目录中。
+
+ git archive --format=tar --prefix=git-1.4.0/ v1.4.0 | gzip >git-1.4.0.tar.gz
+ 为v1.4.0版本创建压缩的tarball。
+
+ git archive --format=tar.gz --prefix=git-1.4.0/ v1.4.0 >git-1.4.0.tar.gz
+ 与上面相同，但是使用内置的tar.gz处理。
+
+ git archive --prefix=git-1.4.0/ -o git-1.4.0.tar.gz v1.4.0
+ 与上面相同，但是格式是从输出文件推断出来的。
+
+ git archive --format=tar --prefix=git-1.4.0/ v1.4.0^{tree} | gzip >git-1.4.0.tar.gz
+ 为v1.4.0版本创建压缩的tarball，但没有全局扩展的pax标头。
+
+ git archive --format=zip --prefix=git-docs/ HEAD:Documentation/ > git-1.4.0-docs.zip
+ 将当前文件头的Documentation /目录中的所有内容放入git-1.4.0-docs.zip中，并将其前缀为git-docs /。
+
+ git archive -o latest.zip HEAD
+ 创建一个Zip存档，其中包含当前分支上最新提交的内容。请注意，输出格式是通过输出文件的扩展名推断出来的。
 
 # 使用远程仓库GitHub
 
