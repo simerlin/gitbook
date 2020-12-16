@@ -39,12 +39,16 @@ $ git init
     git archive -o update.zip HEAD $(git diff 70ad949... 7046619... --name-only)
 * git checkout -- readme.txt 丢弃工作区修改
 * git rm test.txt 加 git commit 删除文件
-* git 导出指定版本
-   git archive -o ../updated.zip HEAD $(git diff --name-only HEAD)
-   git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)
-   git diff --name-only 76f4ccc65619f0cda40d7b2fa9f4bcf1cdf3934a e13374a780bbe40fb96e5a7d6ef3fd100c97984b > list.txt
-   git archive -o ../latest.zip list.txt
-   git archive -o latest.zip HEAD //导出最近修改
+#git导出版本
+
+ ##导出最新的版本库
+   git archive -o ../latest.zip HEAD
+ ##导出指定提交记录
+   git archive -o ../git-1.4.0.tar 8996b47 
+##导出一个目录
+   git archive -o ../git-1.4.0-docs.zip  HEAD:Documentation/  
+##导出为tar.gz格式
+   git archive   8996b47 | gzip > ../git-1.4.0.tar.gz
 
 ## 使用远程仓库GitHub
 
