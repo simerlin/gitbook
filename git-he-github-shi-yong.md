@@ -39,6 +39,7 @@ $ git init
     git archive -o update.zip HEAD $(git diff 70ad949... 7046619... --name-only)
 * git checkout -- readme.txt 丢弃工作区修改
 * git rm test.txt 加 git commit 删除文件
+
 #git导出版本
 
  #### 导出最新的版本库
