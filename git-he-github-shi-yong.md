@@ -42,14 +42,14 @@ $ git init
 #git导出版本
  #### 导出最新的版本库
    git archive -o ../latest.zip HEAD
- ##导出指定提交记录
+ #### 导出指定提交记录
    git archive -o ../git-1.4.0.tar 8996b47 
-##导出一个目录
+ #### 导出一个目录
    git archive -o ../git-1.4.0-docs.zip  HEAD:Documentation/  
-##导出为tar.gz格式
+ #### 导出为tar.gz格式
    git archive   8996b47 | gzip > ../git-1.4.0.tar.gz
 
-## 使用远程仓库GitHub
+ #### 使用远程仓库GitHub
 
 1. 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id\_rsa和id\_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key，正常情况下一路回车就完成了
 
