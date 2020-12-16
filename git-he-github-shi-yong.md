@@ -32,8 +32,19 @@ $ git init
 * git reset --hard HEAD^ 和 git reset --hard xxx 回退到某个版本
 * git reflog 查看版本回退日志
 * git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+   linux版本导出差异文件
+    git diff 2da595c daea1d6 --name-only | xargs zip update.zip 对比版本差异文件并导出zip包
+   window版本
+    右键Git Bash Here
+    git archive -o update.zip HEAD $(git diff 70ad949... 7046619... --name-only)
 * git checkout -- readme.txt 丢弃工作区修改
 * git rm test.txt 加 git commit 删除文件
+* git 导出指定版本
+   git archive -o ../updated.zip HEAD $(git diff --name-only HEAD)
+   git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)
+   git diff --name-only 76f4ccc65619f0cda40d7b2fa9f4bcf1cdf3934a e13374a780bbe40fb96e5a7d6ef3fd100c97984b > list.txt
+   git archive -o ../latest.zip list.txt
+   git archive -o latest.zip HEAD //导出最近修改
 
 ## 使用远程仓库GitHub
 
