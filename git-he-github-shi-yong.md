@@ -51,7 +51,7 @@ $ git init
  #### 导出为tar.gz格式
    git archive   8996b47 | gzip > ../git-1.4.0.tar.gz
 
- #### 使用远程仓库GitHub
+# 使用远程仓库GitHub
 
 1. 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id\_rsa和id\_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key，正常情况下一路回车就完成了
 
