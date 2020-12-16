@@ -40,6 +40,7 @@ $ git init
 * git checkout -- readme.txt 丢弃工作区修改
 * git rm test.txt 加 git commit 删除文件
 #git导出版本
+
  #### 导出最新的版本库
    git archive -o ../latest.zip HEAD
  #### 导出指定提交记录
